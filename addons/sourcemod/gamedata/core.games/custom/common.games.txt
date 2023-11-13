@@ -1,0 +1,39 @@
+"Games"
+{
+	/* CGlobalEntityList */
+	"#default"
+	{
+		"Offsets"
+		{
+			/* Offset into LevelShutdown */
+			/*
+			"gEntList"
+			{
+				"windows"	"11"
+				"linux"		"13"
+			}
+			*/
+			"gEntList"
+			{
+				"windows"	"74"
+			}
+		}
+		
+		"Signatures"
+		{
+			/*
+			"LevelShutdown"
+			{
+				"library"	"server"
+				"windows"	"\xE8\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xB9\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xE8"
+				"linux"		"\xE8\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xC7\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xE8"
+			}
+			*/
+			"LevelShutdown"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x10\x80\x3D\x2A\x2A\x2A\x2A\x00"
+			}
+		}
+	}
+}

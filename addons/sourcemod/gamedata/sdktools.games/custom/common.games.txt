@@ -1,0 +1,187 @@
+"Games"
+{
+	"#default"
+	{
+		"Offsets"
+		{
+			/* Offset into CBaseTempEntity constructor */
+			"s_pTempEntities"
+			{
+				"windows"	"3"
+			}
+			"GetTEName"
+			{
+				"windows"	"4"
+				"linux"		"4"
+			}
+			"GetTENext"
+			{
+				"windows"	"8"
+				"linux"		"8"
+			}
+			"TE_GetServerClass"
+			{
+				"windows"	"0"
+				"linux"		"0"
+			}
+			"PlayerRunCmd"
+			{
+				"windows"	"418"
+				"linux"		"419"
+				"mac"		"419"
+			}
+			"GiveNamedItem"
+			{
+				"windows"	"400"
+				"linux"		"401"
+				"mac"		"401"
+			}
+			"RemovePlayerItem"
+			{
+				"windows"	"270"
+				"linux"		"271"
+				"mac"		"271"
+			}
+			"Teleport"
+			{
+				"windows"	"108"
+				"linux"		"109"
+				"mac"		"109"
+			}
+			"Activate"
+			{
+				"windows"	"33"
+				"linux"		"34"
+				"mac"		"34"
+			}
+			"WeaponEquip"
+			{
+				"windows"	"261"
+				"linux"		"262"
+				"mac"		"262"
+			}
+			"AcceptInput"
+			{
+				"windows"	"36"
+				"linux"		"37"
+				"mac"		"37"
+			}
+			"EyeAngles"
+			{
+				"windows"	"131"
+				"linux"		"132"
+				"mac"		"132"
+			}
+			"GetVelocity"
+			{
+				"windows"	"140"
+				"linux"		"141"
+				"mac"		"141"
+			}
+			"CommitSuicide"
+			{
+				"windows"	"440"
+				"linux"		"440"
+				"mac"		"440"
+			}
+			"Ignite"
+			{
+				"windows"	"209"
+				"linux"		"210"
+				"mac"		"210"
+			}
+			"Extinguish"
+			{
+				"windows"	"213"
+				"linux"		"214"
+				"mac"		"214"
+			}
+			"Weapon_GetSlot"
+			{
+				"windows"	"268"
+				"linux"		"269"
+				"mac"		"269"
+			}
+			"GiveAmmo"
+			{
+				"windows"	"251"
+				"linux"		"252"
+				"mac"		"252"
+			}
+			"SetOwnerEntity"
+			{
+				"windows"	"17"
+				"linux"		"18"
+				"mac"		"18"
+			}
+			"GetAttachment"
+			{
+				"windows"	"205"
+				"linux"		"206"
+				"mac"		"206"
+			}
+			/*
+			"gEntList"
+			{
+				"windows"	"74"
+			}
+			*/
+			"gEntList"
+			{
+				"windows"	"11"
+				"linux"		"13"
+			}
+		}
+		"Signatures"
+		{
+			"CBaseTempEntity"
+			{
+				"library"	"server"
+				"windows"	"\x56\x8B\x35\x2A\x2A\x2A\x2A\x85\xF6\x74\x13"
+			}
+			"s_pTempEntities"
+			{
+				"library"	"server"
+				"linux"		"@_ZN15CBaseTempEntity15s_pTempEntitiesE"
+			}
+			"FindEntityByClassname"
+			{
+				"library"	"server"
+				"windows"	"\x53\x55\x56\x8B\xF1\x8B\x4C\x24\x10\x85\xC9\x57\x74\x19\x8B\x01\x8B\x50\x08\xFF\xD2\x8B\x00\x25\xFF\x0F\x00\x00\x83\xC0\x01\xC1\xE0\x04\x8B\x3C\x30\xEB\x06\x8B\xBE\x2A\x2A\x2A\x2A\x85\xFF\x74\x39\x8B\x5C\x24\x18\x8B\x2D\x2A\x2A\x2A\x2A\xEB\x03"
+				"linux"		"@_ZN17CGlobalEntityList21FindEntityByClassnameEP11CBaseEntityPKc"
+			}
+			"FireOutput"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x14\xD9\x45\x10\x8B\xD1\x51\xD9\x1C\x24\xFF\x75\x0C\x33\xC0\xFF\x75\x08\x89\x45\xEC\x8B\x45\xF0\x83\xEC\x14"
+				"linux"		"@_ZN17CBaseEntityOutput10FireOutputE9variant_tP11CBaseEntityS2_f"
+				"mac"		"@_ZN17CBaseEntityOutput10FireOutputE9variant_tP11CBaseEntityS2_f"
+			}
+			"LookupAttachment"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x56\x8B\xF1\x85\xF6\x74\x2A\x80\xBE\x2A\x2A\x2A\x2A\x00\x75\x2A\x83\xBE\x2A\x2A\x2A\x2A\x00\x75\x2A\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x8B\xCE\xE8\x2A\x2A\x2A\x2A\x8B\x86\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x83\x38\x00\x74\x2A\xFF\x75\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\xC4\x08\x40"
+				"linux"		"@_ZN14CBaseAnimating16LookupAttachmentEPKc"
+				"mac"		"@_ZN14CBaseAnimating16LookupAttachmentEPKc"
+			}
+			"GetAttachmentLocal"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x81\xEC\x98\x00\x00\x00\xA1\x2A\x2A\x2A\x2A\x33\xC5\x89\x45\x2A\x53\x8B\x5D\x2A\x56\x8B\xF1"
+			}
+			"LevelShutdown"
+			{
+				"library"	"server"
+				"windows"	"\xE8\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xB9\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xE8"
+				"linux"		"\xE8\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xC7\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xE8"
+			}
+			/*
+			"LevelShutdown"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x10\x80\x3D\x2A\x2A\x2A\x2A\x00"
+			}
+			*/
+		}
+	}
+}
