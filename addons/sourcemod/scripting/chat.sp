@@ -62,8 +62,8 @@ stock void SendMsg_KeyHintMsg(int client, char[] format, any ...)
 	
 	if (keyhint != INVALID_HANDLE)
 	{
-		char str[256];
-		VFormat(str, 256, format, 3);
+		char str[253];
+		VFormat(str, 253, format, 3);
 		BfWriteByte(keyhint,1);
 		BfWriteString(keyhint, str);//Message
 		EndMessage();
