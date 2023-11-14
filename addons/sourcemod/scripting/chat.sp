@@ -98,6 +98,7 @@ public Action OnSayCmd(int client, const char[] command, int args)
 	char message[64];
 	FormatEx(message,64,"%s: %s",name,text);
 	PushArrayString(chathistory,message);
+	PrintToConsoleAll(message);
 	if(chathistory.Length > 8)
 	{
 		RemoveFromArray(chathistory,0);
