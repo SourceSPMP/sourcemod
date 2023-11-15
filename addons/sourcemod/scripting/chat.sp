@@ -72,13 +72,18 @@ stock void SendMsg_KeyHintMsg(int client, char[] format, any ...)
 
 public void DisplayChatHistory(int client)
 {
-	char history[256];
+	char history[253];
 	char gotten[64];
-	for(int i = 0; i < chathistory.Length; i++)
+	for(int i = chathistory.Length-1; i >= 0; i--)
 	{
-		GetArrayString(chathistory,i,gotten,512);
-		StrCat(history,256,gotten);
-		StrCat(history,256,"\n");
+		GetArrayString(chathistory,i,gotten,64);
+		if(strlen(history)+strlen(gotten) >= 252)
+		{
+			break;
+		}
+		PrintToServer(gotten);
+		Format(history,253,"%s\n%s",gotten,history);
+		
 	}
 	SendMsg_KeyHintMsg(client,history);
 }
@@ -91,15 +96,15 @@ public Action ShowChat(int client, int args)
 
 public Action OnSayCmd(int client, const char[] command, int args)
 {
-	char name[64];
-	GetClientName(client,name,64);
-	char text[64];
-	GetCmdArgString(text,64);
-	char message[64];
-	FormatEx(message,64,"%s: %s",name,text);
+	char name[128];
+	GetClientName(client,name,128);
+	char text[128];
+	GetCmdArgString(text,128);
+	char message[128];
+	FormatEx(message,128,"%s: %s",name,text);
 	PushArrayString(chathistory,message);
 	PrintToConsoleAll(message);
-	if(chathistory.Length > 8)
+	if(chathistory.Length > 32)
 	{
 		RemoveFromArray(chathistory,0);
 	}
