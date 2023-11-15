@@ -81,7 +81,6 @@ public void DisplayChatHistory(int client)
 		{
 			break;
 		}
-		PrintToServer(gotten);
 		Format(history,253,"%s\n%s",gotten,history);
 		
 	}
@@ -104,6 +103,7 @@ public Action OnSayCmd(int client, const char[] command, int args)
 	FormatEx(message,128,"%s: %s",name,text);
 	PushArrayString(chathistory,message);
 	PrintToConsoleAll(message);
+	PrintToServer(message);
 	if(chathistory.Length > 32)
 	{
 		RemoveFromArray(chathistory,0);
